@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --yellow: #ffe699;
+    --pink: #f7dffa;
+    --light-pink: #f5d0f9;
+    --purple: #c4b5ff;
+    --green: #b3ffb3;
+    --blue: #a5d4fe;
+    --white: white;
+    --black: black;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-pink);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100vw;
+    margin: 3px;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    background: var(--pink);
+    display: flex;
+    margin: 3px;
+}
+
+header {
+    height: 100px;
+    flex: 1 1 100vw;
+}
+
+header #logo {
+    display: flex;
+    flex: 0 1 200px;
+    background: var(--pink);
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/Logo1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#openMenu,
+#closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1 1 200px;
+}
+
+nav a {
+    margin: 0 3%;
+    font-size: 15pt;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 224px);
+    flex: 20 1 500px;
+    /* flex-wrap: wrap; */
+    overflow: auto;
+}
+
+.main-sec {
+    margin: 10px 0 35px;
+}
+
+figure img {
+    width: 100%;
+}
+
+aside {
+    flex: 1 1 200px;
+}
+
+footer {
+    height: 100px;
+    flex: 1 1 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.marshmallow {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 717px) {
+    #openMenu,
+    #closeMenu {
+        display: block;
+    }
+
+    #openMenu {
+        margin-left: auto;
+    }
+
+    #closeMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    nav {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 197, 253, 0.75);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    nav a {
+        margin: 3%;
+    }
+
+    main {
+        height: calc(100vh - 330px);
+    }
+
+    aside {
+        height: 200px;
+    }
+
+    figure img {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    figure img {
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    figure img {
+        width: 100px;
+    }
+}
+
+.wip-sec {
+    display: flex;
+    flex-direction: column;
+}
+
+.wip-button {
+    color: purple;
+    font-weight: 900;
+    font-size: 36px;
+}
